@@ -3,9 +3,9 @@
 ## Información del Repositorio
 - **DESCRIPCIÓN:** Repositorio creado para alojar los trabajos prácticos realizados.
 - **TRABAJOS PRÁCTICOS:** 
-  - [TP 1](/includes/tp_1/) 
-  - [TP 2](/includes/tp_2/)
-  - [TP 3](/includes/tp_3/)
+  - [TP 1](/tp_1/) 
+  - [TP 2](/tp_2/)
+  - [TP 3](/tp_3/)
 - **PROFESORES:** Sanchez Viviana, Pino Maria Laura, Carrasco Claudia
 ## Datos Personales
 - **NOMBRE Y APELLIDO:** Omar Lestrade Zapata
