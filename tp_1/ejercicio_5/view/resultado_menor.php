@@ -12,12 +12,12 @@
 <body>
     <div  class="container-fluid">
         <div class="container col-md-5" style="margin:30px;">
-            <h2>Resultado del Ejercicio N°4 para Menores:</h2>
+            <h2>Resultado del Ejercicio N°5 para Menores:</h2>
             <div class="p-2 mb-3 bg-info bg-gradient text-black">
                 <?php         
-                    echo '<p class="lead">Hola, yo soy '.$arrayDatos['nombre'].', '.$arrayDatos['apellido'].' tengo '.$arrayDatos['edad'].' años y vivo en '.$arrayDatos['direccion'].'</p>';
-                    echo '<p class="lead">Mi nivel de estudios es: '.$arrayDatos['gridEstudios'].'</p>';
-                    echo '<p class="lead">Mi Género es: '.$arrayDatos['gridSexo'].'</p>';
+                    echo '<p>Hola, yo soy '.$arrayDatos['nombre'].', '.$arrayDatos['apellido'].' tengo '.$arrayDatos['edad'].' años y vivo en '.$arrayDatos['direccion'].'</p>';
+                    echo '<p>Mi nivel de estudios es: '.$arrayDatos['gridEstudios'].'</p>';
+                    echo '<p>Mi Género es: '.$arrayDatos['gridSexo'].'</p>';
                 ?>
             </div>
             

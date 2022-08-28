@@ -12,7 +12,7 @@
 <body>
   <div class="container p-3">
     <div class="border bg-light border-3 rounded p-2 mt-3">
-      <h3>Ejercicio 5</h3>
+      <h3>Ejercicio 6</h3>
       <form method="get" action="<?php dirname(__DIR__).'/controller/main.php' ?>" id="form-get">
       <div class="row mb-3">  
       <div class="col-6">
@@ -111,6 +111,36 @@
         <input class="form-check-input" type="radio" name="gridSexo" id="gridSexo" value="Otro" required>
         <label class="form-check-label" for="gridRadios3">
           Otro
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="row p-4 mb-3">
+    <legend class="col-form-label col-sm-5 pt-0 fw-bold text-end">Deportes que practica</legend>
+    <div class="col-sm-7">
+      <div class="form-check ">
+        <input class="form-check-input" type="checkbox" name="gridDeporte[]" id="gridDeporte[]" value="Fútbol" >
+        <label class="form-check-label" for="gridchecks1">
+          Fútbol
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="gridDeporte[]" id="gridDeporte[]" value="Basquet">
+        <label class="form-check-label" for="gridchecks1">
+          Basquet
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="gridDeporte[]" id="gridDeporte[]" value="Tenis" >
+        <label class="form-check-label" for="gridchecks1">
+          Tennis
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="gridDeporte[]" id="gridDeporte[]" value="Voley" >
+        <label class="form-check-label" for="gridchecks1">
+          Voley
         </label>
       </div>
     </div>
