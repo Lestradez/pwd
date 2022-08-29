@@ -40,7 +40,7 @@
               required
             />
           </div>
-          <div class="mb-3row">
+          <div class="mb-3">
             <label for="edad" class="form-label">Edad: </label>
             <input
               type="number"
@@ -66,7 +66,6 @@
           </div>
         </div>
         <div class="col-sm-6">
-
 
     <fieldset class="row p-4 mb-3" >
       <legend class="col-form-label col-sm-5 pt-0 fw-bold text-end">Nivel de Estudios</legend>
