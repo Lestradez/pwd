@@ -8,12 +8,7 @@
         <a class="nav-link active" href="<?php echo(dirname($_SERVER['REQUEST_URI'],1)) ?>">Inicio</a>
         <a class="nav-link" href="ejercicio_1/">Ejercicio 1</a>
         <a class="nav-link" href="ejercicio_2/">Ejercicio 2</a>
-        <a class="nav-link" href="ejercicio_3">Ejercicio 3</a>
-        <a class="nav-link" href="ejercicio_4">Ejercicio 4</a>
-        <a class="nav-link" href="ejercicio_5">Ejercicio 5</a>
-        <a class="nav-link" href="ejercicio_6">Ejercicio 6</a>
-        <a class="nav-link" href="ejercicio_7">Ejercicio 7</a>
-        <a class="nav-link" href="ejercicio_8">Ejercicio 8</a>        
+        <a class="nav-link" href="ejercicio_3">Ejercicio 3</a>  
       </div>
     </div>
   </div>
