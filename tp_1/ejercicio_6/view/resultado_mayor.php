@@ -18,7 +18,7 @@
                     echo '<p>Hola, yo soy '.$arrayDatos['nombre'].', '.$arrayDatos['apellido'].' tengo '.$arrayDatos['edad'].' años y vivo en '.$arrayDatos['direccion'].'</p>';
                     echo '<p>Mi nivel de estudios es: '.$arrayDatos['gridEstudios'].'</p>';
                     echo '<p>Mi Género es: '.$arrayDatos['gridSexo'].'</p>';
-                    echo '<p>Practico '.count($arrayDatos['gridDeporte']).' deportes</p>';
+                    echo '<p>Practico '.$arrayDatos['cantDeportes'].' deportes</p>';
                 ?>
             </div>
             
