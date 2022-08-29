@@ -12,7 +12,7 @@
 <body>
   <div  class="container-fluid">
     <div class="container col-md-5" style="margin:30px;">
-      <h2>Resultado del Ejercicio N°1:</h2>
+      <h2>Resultado del Ejercicio N°2:</h2>
       <div class="mb-3">
         <?php         
           echo '<p>'.$arrayData['resultado'].'</p>';

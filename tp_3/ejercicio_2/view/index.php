@@ -12,7 +12,7 @@
 <body>
   <div class="container p-3">
     <div class="border bg-light border-3 rounded p-2 mt-3 mb-4 ">
-      <h3>Ejercicio 1</h3>
+      <h3>Ejercicio 2 </h3>
       <form id="formFile" name="formFile" class="mb-3" method="POST" action="<?php dirname( __DIR__ ) .'/controller/main.php'; ?>" enctype="multipart/form-data" >
         <div class="mb-3">
           <label for="formFile" class="form-label">Seleccione un archivo. Debe ser un archivo de texto plano (.txt)</label>
