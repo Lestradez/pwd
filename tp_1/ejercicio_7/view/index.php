@@ -44,8 +44,8 @@
             </div>
           </div>
           <div class="mb-3">
-            <select class="form-select" aria-label="Default select example" name="operacion" id="operacion">
-              <option selected>Seleccione la operación</option>
+            <select class="form-select" aria-label="Default select example" name="operacion" id="operacion" required>
+              <option value="">Seleccione la operación</option>
               <option value="suma">Suma</option>
               <option value="resta">Resta</option>
               <option value="multiplicación">Multiplicación</option>
