@@ -3,9 +3,8 @@ function guardarArchivo ($data){
     if ($data["error"] <= 0) {
       $result ['resultado']='';
       $formatos_permitidos =  array('doc','pdf');
-      $archivo = $data['name'];
-      $extension = pathinfo($archivo, PATHINFO_EXTENSION);
       $result ["nombre"] = $data['name'] ;
+      $extension = pathinfo($result['nombre'], PATHINFO_EXTENSION);
       $result ["tipo"] = $data['type'] ;
       $result ["tamaño"] = ($data['size']/1048576 ) ;
       $result ["carpeta temporal"] = $data['tmp_name'];
