@@ -10,7 +10,7 @@ Crear una página php que contenga un formulario HTML como el que se indica en l
 Cambiar el método _**POST**_ por _**GET**_ y analizar las diferencias.
 
 <div style="text-align:center">
-<img src="/tp_1/img/ej3.png"  width="250"/>
+<img src="./img/ej3.png"  width="250"/>
 </div>
 
 ## Ejercicio 4
@@ -33,7 +33,7 @@ Crear una página con un formulario que contenga dos input de tipo text y un sel
 Ejemplo del formulario:
 
 <div style="text-align:center">
-<img src="/tp_1/img/ej7.png" style="" width="250"/>
+<img src="./img/ej7.png" style="" width="250"/>
 </div>
 
 ## Ejercicio 8
