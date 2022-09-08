@@ -3,7 +3,7 @@
     include_once ($_SERVER['DOCUMENT_ROOT'].'/pwd/dirs.php'); 
     include (INCLUDES_PATH."head.php");
   ?>    
-  <title>Ejercicio 2 TP 3</title>
+  <title>Ejercicio 1 TP 3</title>
   <?php 
     include (INCLUDES_PATH."links.php");
   ?>

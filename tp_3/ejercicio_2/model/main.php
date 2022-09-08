@@ -15,7 +15,7 @@ function guardarArchivo ($data){
           } 
           else {
             $result ['resultado'] = "El archivo ".$data['name']." se ha copiado con Éxito";
-            $result ['enlace'] = dirname($_SERVER['REQUEST_URI']).'/files/'.$data['name'];
+            $result ['enlace'] = dirname($_SERVER['REQUEST_URI']).'/ejercicio_2/files/'.$data['name'];
             $filePath = dirname(__DIR__).'/files/'.$data['name'] ;
             $file = fopen(dirname(__DIR__).'/files/'.$data['name'],"r");
             $result['texto'] = fread($file,filesize(dirname(__DIR__).'/files/'.$data['name']));
