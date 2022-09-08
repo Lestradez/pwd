@@ -9,7 +9,11 @@
 		<form method="POST" action="<?php dirname( __DIR__ ) .'/controller/main.php'; ?>" id="form"  class="border rounded-bottom p-2 needs-validation" enctype="multipart/form-data" novalidate>
 			<div class="row mb-3">
 				<div class="col position-relative">
-					<label for="titulo" class="form-label fw-bold">Titulo</label>
+					<label for="titulo" class="form-label fw-bold">Titulo  <?php 
+					include_once ($_SERVER['DOCUMENT_ROOT'].'/pwd/dirs.php');
+					echo var_dump (ROOT_PATH);
+					
+					?></label>
 					<input type="text" class="form__input form-control" placeholder="Titulo"  name="titulo" id="titulo" required novalidate/>
 					<div class="invalid-tooltip">
 							Ingrese el título de la película. 
@@ -49,7 +53,7 @@
 				</div>
 				<div class="col position-relative">
 					<label for="anio" class="form-label fw-bold">Año</label>
-					<input type="number" class="form__input form-control" placeholder="Año"  name="anio" id="anio" min="1900" max="2060" required/>
+					<input type="number" class="form__input form-control" placeholder="Año"  name="anio" id="anio" min="1900" max="2022" required/>
 					<div class="invalid-tooltip">
 						Ingrese el año de la película.
 					</div>
@@ -127,7 +131,7 @@
 				<div class="col position-relative">
 					<div class=" position-absolute w-75 ">
 						<label for="formFile" class="form-label fw-bold">Cargar Imagen</label>
-						<!-- s<input type="hidden" name="MAX_FILE_SIZE" value="30000" /> -->
+						<input type="hidden" name="MAX_FILE_SIZE" value="30000" />
 						<input class="form-control" type="file" id="formFile" name="formFile" accept="image/png, image/gif, image/jpeg" required>
 						<div class="invalid-tooltip">
 							Seleccione un archivo de imagen.

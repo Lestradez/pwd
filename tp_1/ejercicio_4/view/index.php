@@ -12,7 +12,7 @@
 <body>
   <div class="container p-3">
     <div class="border bg-light border-3 rounded p-2 mt-3">
-      <h3>Ejercicio 3</h3>
+      <h3>Ejercicio 4</h3>
       <form method="get" action="<?php dirname(__DIR__).'/controller/main.php' ?>" id="form-get">
         <div class="row mb-3">
           <div class="col">
