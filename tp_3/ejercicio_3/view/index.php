@@ -3,22 +3,13 @@
 	<div class="container mt-4 mb-4 bg-light bg-gradient shadow p-3 mb-5 bg-white rounded">
     <div class="rounded-top bg-secondary bg-gradient">
 			<div class="row p-2">
-				<h4 class="text-info"><i class="bi bi-pencil-square m-2"></i>Cinem@s </h4>
+				<h4 class="text-info"><i class="bi bi-pencil-square m-2"></i>Cinem@s</h4>
 			</div>
 		</div>
 		<form method="POST" action="<?php dirname( __DIR__ ) .'/controller/main.php'; ?>" id="form"  class="border rounded-bottom p-2 needs-validation" enctype="multipart/form-data" novalidate>
 			<div class="row mb-3">
 				<div class="col position-relative">
-					<label for="titulo" class="form-label fw-bold">Titulo  <?php 
-					include_once ($_SERVER['DOCUMENT_ROOT'].'/pwd/dirs.php');
-					echo ROOT_PATH;
-					echo TP3_PATH;
-					echo TP2_PATH;
-					echo TP1_PATH;
-
-
-					
-					?></label>
+					<label for="titulo" class="form-label fw-bold">Titulo </label>
 					<input type="text" class="form__input form-control" placeholder="Titulo"  name="titulo" id="titulo" required novalidate/>
 					<div class="invalid-tooltip">
 							Ingrese el título de la película. 
@@ -136,7 +127,7 @@
 				<div class="col position-relative">
 					<div class=" position-absolute w-75 ">
 						<label for="formFile" class="form-label fw-bold">Cargar Imagen</label>
-						<input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+						<input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
 						<input class="form-control" type="file" id="formFile" name="formFile" accept="image/png, image/gif, image/jpeg" required>
 						<div class="invalid-tooltip">
 							Seleccione un archivo de imagen.
@@ -152,6 +143,5 @@
 			</div>
 		</form>
 	</div>
-	<script src="..\ejercicio_3\view/css/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
-  <script src="..\ejercicio_3\view/js/main.js"></script>
+  <script src="..\ejercicio_3\view\js\main.js"></script>
 </section>
