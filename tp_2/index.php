@@ -15,7 +15,7 @@
 </head>
 <body>
   <header>
-    <h1 class="text-center">Trabajo Práctico N°1</h1>
+    <h1 class="text-center">Trabajo Práctico N°2</h1>
   </header>
   <?php
     require_once ('includes/menu.php');

@@ -28,7 +28,7 @@ if($_POST){
         }// fin if 
         else{
             // mensaje de usuario NO registrado
-            
+            include_once dirname(__DIR__).'View/mesajeUsuario.php'; 
 
         }// fin else 
         
