@@ -1,8 +1,8 @@
 
 <section>
   <div  class="container-fluid">
-    <div class="container mt-4 mb-4 shadow p-3 mb-5 bg-white rounded">
-      <h4 class="alert-heading">¡Película registrada con éxito!</h4> 
+    <div class="container mt-4 mb-4 shadow p-3 mb-5 border bg-light border-3 rounded ">
+      <h4 class="alert-heading text-center mb-4 ">¡Película registrada con éxito!</h4> 
       <div class="alert alert-success" role="alert">   
         <div class="row justify-content-center">       
           <div class="col-4 p-4 mb-1 h1">

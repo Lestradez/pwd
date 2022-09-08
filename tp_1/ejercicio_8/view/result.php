@@ -1,26 +1,22 @@
-<!DOCTYPE html>
 
-<head>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-    crossorigin="anonymous"
-  />
-</head>
 
-<body>
-    <div  class="container-fluid ">
-        <div class="container col-md-5" style="margin:30px;">
-            <h2>Resultado del Ejercicio N°8:</h2>
-            <div class="p-2 mb-3 bg-dark bg-gradient text-white">
-                <?php         
+<section class="container justify-content-center align-items-center">
+  <div class="row">
+    <div class="container mt-4 mb-4 shadow p-3 mb-5 border bg-light border-3 rounded col-auto">
+      <h4 class="alert-heading text-center mb-4 ">TP 1 - Ejercicio 8</h4> 
+        <div class="alert alert-success " role="alert">   
+          <div class="row">
+            <div class="mb-3">
+            <?php         
                     echo '<p>El valor de la entrada es:  $'.$valorEntrada.'</p>';
                 ?>
             </div>
-            
             <div class="mb-3">
             <a href= "./index.php" class="btn btn-primary">Volver</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </div>
+</section>
