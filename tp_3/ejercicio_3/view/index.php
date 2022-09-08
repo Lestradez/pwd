@@ -11,7 +11,12 @@
 				<div class="col position-relative">
 					<label for="titulo" class="form-label fw-bold">Titulo  <?php 
 					include_once ($_SERVER['DOCUMENT_ROOT'].'/pwd/dirs.php');
-					echo var_dump (ROOT_PATH);
+					echo ROOT_PATH;
+					echo TP3_PATH;
+					echo TP2_PATH;
+					echo TP1_PATH;
+
+
 					
 					?></label>
 					<input type="text" class="form__input form-control" placeholder="Titulo"  name="titulo" id="titulo" required novalidate/>
