@@ -15,43 +15,43 @@
 </head>
 <!-- -->
 <body>
-    <!--ALINEA TODOS OS ITEMS A AL CENTRO-->
-    <div class="d-flex justify-content-center p-3">
-        <div class="card col-sm-6 p-3 bg-ligth w-25 aling-self-center">
-            <!-- FORMULARIO USUARIO Y CONTRASEÑA-->
-            <form class="form" action="../Controller/control.php" method="post" was validated onsubmit="return validar();">
-                <div class="mb-3 text-center">
-                    <h1 class="display-6">Member Login</h1>
-                    
+     <!--ALINEA TODOS OS ITEMS A AL CENTRO-->
+<div class="modal-dialog">
+    <div class="d-flex justify-content w-75">
+        <div class="modal-content text-center">
+            <div class="modal-header text-center">
+                <h1 class="display-6">Member Login</h1>   
+            </div>
+
+            <!-- FORMULARIO   USUARIO-->
+            <form action="../Controller/control.php" name="form" method="post" was-validated onsubmit="return validar();">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="username"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" classs="form-control" placeholder="Username" name="usuario" id="usuario" required>
+                    <div class="invalid-feedback" id="feedback-usuario"></div>
                 </div>
-                <div class="col-12 sm-12 mb-3">
-                    
-                    <div class="input-group-text">
-                        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                        <input type="text" class="form-control" id="userName" placeholder="Usermane" required>
-                        <!-- VALIDACION -->
-                        <div class="valid-feedback">Válido</div>
-                        <div class="invalid-feedback">Ingrese un Nombre de Usuario</div>
-                    </div>
+                
+                <!-- FORMULARIO   PASSWORD-->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="password"><i class="bi bi-lock-fill"></i></span>
+                    <input type="password" classs="form-control" placeholder="Password"  name="pwd" id="pwd" required>
+                    <div class="invalid-feedback" id="feedback-pwd"></div>
                 </div>
-                <div class="col-12 sm-12 mb-3">
-                    <!--NO ME FUNCIONA EL LOGO DE PASSWORD-->
-                    <div class="input-group-text">
-                        <span class="input-group-text"> <i class="fa-solid fa-lock"></i> </span>
-                        <input type="password" class="form-control" id="pwd" placeholder="password" min="8" required>
-                        <!--VALIDACION-->
-                        <div class="valid-feedback">Válido</div>
-                        <div class="invalid-feedback">Ingrese una Contraseña</div>
-                    </div>
-                </div>
+
+
                 <div class="d-grid">
                     <button type="submit" class="btn btn-success btn-block">Login</button>
                 </div>
 
             </form>
+              
+
+            </form>
         </div>    
 
     </div> 
+
+</div>
 
 
      <!--Link clasico de Js-->
