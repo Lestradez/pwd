@@ -84,7 +84,7 @@
 			<div class="row mb-3">
 				<div class="col position-relative">
 					<label for="duracion" class="form-label fw-bold">Duración (minutos)</label>
-					<input type="number" class="form__input form-control" placeholder="Duración" name="duracion" id="duracion" maxlength="3" required/>
+					<input type="number" class="form__input form-control" placeholder="Duración" name="duracion" id="duracion" min="0" max="999" required/>
 					<div class="invalid-tooltip">
 						Ingrese la cantidad de mintutos que dura la película.
 					</div>
@@ -128,7 +128,7 @@
 					<div class=" position-absolute w-75 ">
 						<label for="formFile" class="form-label fw-bold">Cargar Imagen</label>
 						<input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
-						<input class="form-control" type="file" id="formFile" name="formFile" accept="image/png, image/gif, image/jpeg" required>
+						<input class="form-control" type="file" id="formFile" name="formFile" accept="image/*" required>
 						<div class="invalid-tooltip">
 							Seleccione un archivo de imagen.
 						</div>
