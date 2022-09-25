@@ -1,7 +1,7 @@
 <?php
 include_once ($_SERVER['DOCUMENT_ROOT'].'/pwd/dirs.php'); 
 function guardarArchivo ($data){
-  $result["error"]=$data["error"];
+  //$result["error"]=$data["error"];
   if ($data["error"] <= 0) {
     $formatos_permitidos =  array('jpg','png','jpeg','gif');
     $result ["nombre"] = $data['name'] ;
@@ -23,9 +23,10 @@ function guardarArchivo ($data){
     } else {
       $result ['resultado'] = 'Error formato no permitido !!';
     }
-  } else
+  } else {
   $result ['resultado'] = "ERROR: no se pudo cargar el archivo. No se pudo acceder al archivo Temporal.";
-    
+    $result['error'] = true;
+  }
 return $result;
 }
 
