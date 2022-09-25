@@ -2,7 +2,7 @@
 function guardarArchivo ($data){
     if ($data["error"] <= 0) {
       $result ['resultado']='';
-      $formatos_permitidos =  array('doc','pdf');
+      $formatos_permitidos =  array('txt');
       $result ["nombre"] = $data['name'] ;
       $extension = pathinfo($result['nombre'], PATHINFO_EXTENSION);
       $result ["tipo"] = $data['type'] ;

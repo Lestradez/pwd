@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-  <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="../../includes/bootstrap-5.2.0-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="../../includes/bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../includes/bootstrap-icons-1.9.1/fonts/bootstrap-icons.woff">
-    <script src="./js/main.js"></script>
-  </head>
-  <body class="bg-white">
-    <section>
-    <div  class="container-fluid">
+
+<section class="container justify-content-center align-items-center">
+  <div class="row">
+    <div  class="container-fluid col-auto">
       <div class="container mt-4 mb-4 shadow p-3 mb-5 bg-white rounded">
         <div class="alert alert-success" role="alert">
           <h4 class="alert-heading text-primary">La pelicula introducida es:</h4>
@@ -30,6 +21,5 @@
         </div>
       </div>
     </div>
+</div>
     </section>
-  </body>
-</html>

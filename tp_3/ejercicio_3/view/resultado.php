@@ -1,13 +1,17 @@
+
 <section>
   <div  class="container-fluid">
-    <div class="container mt-4 mb-4 shadow p-3 mb-5 bg-white rounded">
-      <h4 class="alert-heading">¡Película registrada con éxito! </h4> 
+    <div class="container mt-4 mb-4 shadow p-3 mb-5 border bg-light border-3 rounded ">
+      <h4 class="alert-heading text-center mb-4 ">¡Película registrada con éxito!</h4> 
       <div class="alert alert-success" role="alert">   
         <div class="row justify-content-center">       
           <div class="col-4 p-4 mb-1 h1">
             <img src="<?php echo $arrayData['url-image'] ?>" class=" img-thumbnail" alt="Responsive image">
           </div>      
           <div class="col-8 ps-3 p-4 ">
+            <?php if $arrayData['error']{?>
+              <h4 class="alert-heading text-primary mb-3"><?php echo $arrayData['resultado'] ?></h4>
+            <?php }else{ ?> 
             <h4 class="alert-heading text-primary mb-3">Información</h4>
             <p class="mb-1"><b class="text-success">Título: </b><?php echo $arrayData['titulo'] ?></p>
             <p class="mb-1"><b class="text-success">Actores: </b><?php echo $arrayData['actores'] ?></p>
@@ -19,6 +23,7 @@
             <p class="mb-1"><b class="text-success">Duración: </b><?php echo $arrayData['duracion'] ?></p>
             <p class="mb-1"><b class="text-success">Género: </b><?php echo $arrayData['genero'] ?></p>
             <p class="mb-1"><b class="text-success">Sinopsis: </b><?php echo $arrayData['sinopsis'] ?></p>
+            <?php } ?>
             <div class="mt-5">
               <a href= "<?php dirname( __DIR__ ) .'/index.php';?>" class="btn btn-primary">Volver</a>    
             </div>

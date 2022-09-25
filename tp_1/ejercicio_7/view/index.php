@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-
-<head>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-    crossorigin="anonymous"
-  />
-</head>
-
-<body>
-  <div class="container p-3 col-sm-4">
-    <div class="border bg-light border-3 rounded p-2 mt-3">
-      <h3>Ejercicio 7</h3>
+<section class="container justify-content-center align-items-center">
+  <div class="row">
+    <div " class="container p-3 col-auto">
+      <div class="border bg-light border-3 rounded p-2 mt-3 mb-4 shadow">
+      <h3 class=" text-center mb-2 ">TP 1 - Ejercicio 7</h3>
+      <div class="border bg-light border-3 rounded p-2 mt-3">
       <form method="get" action="<?php dirname(__DIR__).'/controller/main.php' ?>" id="form-get">
         <div class="row">
           <div class="col-sm-6">  
@@ -57,4 +48,5 @@
       </form>
     </div>
   </div>
-</body>
+</div>
+</section>
