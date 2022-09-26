@@ -3,3 +3,6 @@
     Programación Web Dinámica 2022 
   </div>
 </footer>
+<script src="<?php echo $BASE_URL ?>view/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
