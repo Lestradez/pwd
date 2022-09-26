@@ -148,11 +148,13 @@ class Auto {
         $salida=false;
         $objBase=new BaseDatos();
         $objPersona=new Persona();
-        $row=$objBase->Registro();
-        $objPersona=$objPersona->personaConId($row['DniDuenio']);
+        //$row=$objBase->Registro();
+        $objPersona=$objPersona->personaConId($this->getDuenio());
         $dni=$objPersona->getDni();
+        //var_dump($dni); 
+        //var_dump($objPersona);
 
-        $sql="UPDATE auto SET Marca='".$this->getMarca()."' Modelo='".$this->getModelo()."' DniDuenio=".$dni."  WHERE Patente='".$this->getPatente()."'";
+        $sql="UPDATE auto SET DniDuenio='".$dni."' WHERE Patente='".$this->getPatente()."'";
         if($objBase->Iniciar()){
             if($objBase->Ejecutar($sql)){
                 $salida=true; 
@@ -243,7 +245,7 @@ class Auto {
     public  function autoConPatente($parametro){
         $objAuto=null;
         $objBase=new BaseDatos();
-        $sql="SELECT * FROM auto WHERE Patente=".$parametro;
+        $sql="SELECT * FROM auto WHERE Patente='".$parametro."'";
         $res=$objBase->Ejecutar($sql);
         //echo($sql);
         if($res>-1){

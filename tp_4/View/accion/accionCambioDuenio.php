@@ -1,14 +1,18 @@
 <?php
-include_once '../cambioDuenio.php';
-$datos=data_submitted();
-
+include_once '../../configuracio.php';
 $objAuto=new AmbAuto();
-$objAuto=$objAuto->autoConPatente($datos['Patente']);// obtiene el array de la tabla con la patente dada por el formulario
-$datosAuto['Patente']=$objAuto->getPatente();
-$datosAuto['Marca']=$objAuto->getMarca();
-$datosAuto['Modelo']=$objAuto->getModelo();
-$datosAuto['DniDuenio']=$datos['NroDni']; //$objAuto->getDuenio()->getDni();
-$resultado=$objAuto->modificacion($datosAuto);
+$objPersona=new AmbPersona();
+$datos=data_submitted();
+//$autosPatente=$objAuto->autoConPatente($datos['Patente']);
+//$personaObj=$objPersona->personaConDni($datos['NroDni']);
+
+$autoPatente=$objAuto->autoConPatente($datos['Patente']);
+$dniDuenioAuto=$autoPatente->getPatente();
+$personaDni=$objPersona->personaConDni($datos['NroDni']);
+$estaAuto=$objAuto<>null;
+$estaPersona=$personaDni<>null;
+//var_dump($estaAuto); 
+//var_dump($estaPersona); 
 
 
 ?>
@@ -25,14 +29,22 @@ $resultado=$objAuto->modificacion($datosAuto);
     <div class="container">
         <div>
             <?php
-            if($resultado){
-                echo("<p>Se modifico exitosamente el dni del dueño del auto</p>");
+                if($estaAuto && $estaPersona){
+                    $nuevosDatos['Patente']=$autoPatente->getPatente();
+                    $nuevosDatos['Marca']=$autoPatente->getMarca();
+                    $nuevosDatos['Modelo']=$autoPatente->getModelo();
+                    $nuevosDatos['DniDuenio']=$personaDni->getDni();
+                    //var_dump($nuevosDatos);
+                   // var_dump($nuevosDatos['DniDuenio']);
+                    $resultado=$objAuto->modificacion($nuevosDatos);
+                    var_dump($resultado); 
+                    echo("<p>El dni del dueño se cambio exitosamente</p>");
+                }// fin if
+                else{
+                    echo("<p>EL dni o la patente no se encuentran en la BD </p>");
+                
+                }// fin else
 
-            } // fin if 
-            else{
-                echo("<p>No se pudo modificar el dni del dueño del auto</p>");
-
-            }// fin else
             ?>
         </div>
 

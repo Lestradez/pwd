@@ -138,7 +138,9 @@ class BaseDatos extends PDO {
     */
    private function EjecutarDeleteUpdate($sql){
        $cantFilas =-1;
+       echo($sql);
        $resultado=parent::query($sql);
+        
        if(!$resultado){
            $this->analizarDebug();
        }else{
@@ -157,7 +159,7 @@ class BaseDatos extends PDO {
    
    private function EjecutarSelect($sql){
        $cant = -1;
-      //echo($sql."<br>");
+       //echo($sql."<br>");
        $resultado=parent::query($sql);
        if(!$resultado){
            $this->analizarDebug();

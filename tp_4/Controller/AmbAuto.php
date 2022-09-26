@@ -13,10 +13,11 @@ class AmbAuto{
         $obj=null; 
         if(array_key_exists('Patente',$datos) && array_key_exists('Marca',$datos) && array_key_exists('Modelo',$datos) && array_key_exists('DniDuenio',$datos) ){
             $obj=new Auto();
-            $objPersona=new Persona();
-            $objPersona->setDni($datos['DniDuenio']); // como se los otros datos de la persona ???
+            //$objPersona=new Persona();
+           // $objPersona->setDni($datos['DniDuenio']); // como se los otros datos de la persona ???
+            //var_dump($objPersona); 
             // $patente,$marca,$modelo,$duenio
-            $obj->setear($datos['Patente'],$datos['Marca'],$datos['Modelo'],$objPersona);
+            $obj->setear($datos['Patente'],$datos['Marca'],$datos['Modelo'],$datos['DniDuenio']);
         }// fin if 
         return $obj; 
     }// fin function 
