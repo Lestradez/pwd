@@ -9,11 +9,13 @@
 		<form method="POST" action="<?php dirname( __DIR__ ) .'/controller/main.php'; ?>" id="form"  class="border rounded-bottom p-2 needs-validation" enctype="multipart/form-data" novalidate>
 			<div class="row mb-3">
 				<div class="col position-relative">
-					<label for="titulo" class="form-label fw-bold">Titulo  <?php 
-					include_once ($_SERVER['DOCUMENT_ROOT'].'/pwd/dirs.php');
-					echo var_dump (ROOT_PATH);
+					<label for="titulo" class="form-label fw-bold">Titulo  
+						<?php 
+					//include_once ($_SERVER['DOCUMENT_ROOT'].'/pwd/dirs.php');
+					//echo var_dump (ROOT_PATH);
 					
-					?></label>
+					?>
+					</label>
 					<input type="text" class="form__input form-control" placeholder="Titulo"  name="titulo" id="titulo" required novalidate/>
 					<div class="invalid-tooltip">
 							Ingrese el título de la película. 

@@ -73,8 +73,8 @@ function vPwd($dato){
  */
 function estaUsuario($datosUsuario){
 // DATOS ALMACENADOS 
-$datos[0]["usuario"]
-$datos[0]["clave"]; //=array("usuario"=>"pablo","clave"=>"Urra2022");
+$datos[0]["usuario"]="pablo";
+$datos[0]["clave"]="UrraPablo"; //=array("usuario"=>"pablo","clave"=>"Urra2022");
 $datos[1]["usuario"]="dani";
 $datos[1]["clave"]="dani123";
 $datos[2]["usuario"]="juan";
