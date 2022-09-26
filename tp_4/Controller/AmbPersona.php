@@ -10,9 +10,9 @@ class AmbPersona{
      */
     private function cargarObjeto($datos){
         $obj=null;
-        if(array_key_exists('Nombre',$datos) && array_key_exists('Apellido',$datos) && array_key_exists('fechaNac',$datos) && array_key_exists('Telefono',$datos) && array_key_exists('Domicilio',$datos) && array_key_exists('DniDuenio',$datos)){
+        if(array_key_exists('Nombre',$datos) && array_key_exists('Apellido',$datos) && array_key_exists('fechaNac',$datos) && array_key_exists('Telefono',$datos) && array_key_exists('Domicilio',$datos) && array_key_exists('NroDni',$datos)){
             $obj=new Persona();
-            $obj->setear($datos['Nombre'],$datos['Apellido'],$datos['fechaNac'],$datos['Telefono'],$datos['Domicilio'],$datos['DniDuenio']);
+            $obj->setear($datos['Nombre'],$datos['Apellido'],$datos['fechaNac'],$datos['Telefono'],$datos['Domicilio'],$datos['NroDni']);
 
 
         }// fin if
@@ -55,9 +55,10 @@ class AmbPersona{
      * @param array $datos
      * @return boolean
      */
-    public function alta(){
+    public function alta($datos){
         $resp=false;
-        $datos['DniDuenio']=null;
+        //$datos['DniDuenio']=null;
+       // var_dump($datos); 
         $objPersona=$this->cargarObjeto($datos);
         if($objPersona!=null && $objPersona->insertar()){
             $resp=true;
@@ -148,7 +149,16 @@ class AmbPersona{
 
     }// fin function 
 
-
+    /**
+     * METODO RECUPERAR PERSONA CON DNI DADO
+     * @param int $dni
+     * @return obj
+     */
+    public function personaConDni($dni){
+        $objPersona=new Persona();
+        $arrayPersona=$objPersona->personaConId($dni);
+        return $arrayPersona; 
+    }// fin function
 
 }// fin clase 
 

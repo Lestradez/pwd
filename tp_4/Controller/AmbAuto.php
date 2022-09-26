@@ -13,8 +13,10 @@ class AmbAuto{
         $obj=null; 
         if(array_key_exists('Patente',$datos) && array_key_exists('Marca',$datos) && array_key_exists('Modelo',$datos) && array_key_exists('DniDuenio',$datos) ){
             $obj=new Auto();
+            $objPersona=new Persona();
+            $objPersona->setDni($datos['DniDuenio']); // como se los otros datos de la persona ???
             // $patente,$marca,$modelo,$duenio
-            $obj->setear($datos['Patente'],$datos['Marca'],$datos['Modelo'],$datos['DniDuenio']);
+            $obj->setear($datos['Patente'],$datos['Marca'],$datos['Modelo'],$objPersona);
         }// fin if 
         return $obj; 
     }// fin function 
@@ -59,7 +61,7 @@ class AmbAuto{
      */
     public function alta($datos){
         $resp=false;
-        $datos['Patente']=null;
+        //$datos['Patente']=null;
         $objAuto=$this->cargarObjeto($datos);
         if($objAuto!=null && $objAuto->insertar()){
             $resp=true;
@@ -145,8 +147,39 @@ class AmbAuto{
     }// fin funcion     
 
 
+    /**
+     * METODO AUTOS CON MISMO DUENIO
+     * @param int $dni
+     * @return array
+     */
+    public function autosConMismoDuenio($dni){
+        $autos=array(); // almacena los autos con el mismo dueño
+        $arrayAutos=$this->buscar(null);
+        $k=0; // contador
+        foreach($arrayAutos as $unAuto){
+            if($dni==$unAuto->getDni()){
+                $autos[$k]=$unAuto;
+                $k++;
+
+            }// fin if 
+
+        }// fin for 
+
+        return $autos; 
 
 
+    }// fin function
+
+    /**
+     * METODO RECUPERAR AUTO CON PATENTE DADO
+     * @param string $patente
+     * @return obj
+     */
+    public function autoConPatente($patente){
+        $objAuto=new Auto();
+        $arrayAuto=$objAuto->autoConPatente($patente);
+        return $arrayAuto; 
+    }// fin function
 
 
 }// fin clase 

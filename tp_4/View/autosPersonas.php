@@ -1,7 +1,4 @@
-<?php
-include_once '../configuracio.php';
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +12,13 @@ include_once '../configuracio.php';
     <h2>Dueños de los Autos</h2>
     <div class="container">
         <div class="">
-            <form name="duenios" id="duenios" action="../Controller/AmbAuto.php" method="post">
-                <label>Ingrese  su numero de documento:</label><br>
+            <form name="duenios" id="duenios" action="./accion/accionAutosAsociados.php" method="post">
+                <label>Ingrese  su numero de documento:</label><br><br>
                 <input type="number" name="dniDuenio" id="dniDuenio">
                 <input type="submit" name="mostar" id="mostrar" value="Mostrar ">
 
             </form>
+
         </div>
 
     </div>
