@@ -45,7 +45,7 @@ class Persona{
         return $this->nroDni; 
     }// fin function
 
-    public function getfechaNac(){
+    public function getFechaNac(){
         return $this->fechaNac; 
     }// fin function
 

@@ -15,6 +15,7 @@ class AmbAuto{
             $obj=new Auto();
             $objPersona=new Persona();
             $objPersona->setDni($datos['DniDuenio']); // como se los otros datos de la persona ???
+            // $patente,$marca,$modelo,$duenio
             $obj->setear($datos['Patente'],$datos['Marca'],$datos['Modelo'],$objPersona);
         }// fin if 
         return $obj; 
@@ -60,6 +61,7 @@ class AmbAuto{
      */
     public function alta($datos){
         $resp=false;
+        //$datos['Patente']=null;
         $objAuto=$this->cargarObjeto($datos);
         if($objAuto!=null && $objAuto->insertar()){
             $resp=true;
@@ -119,8 +121,8 @@ class AmbAuto{
         $where="";
         if($param<>null){
             // Va preguntando si existe los campos de la tabla 
-            if(isset($param['patente'])){ // evalua si existe el auto con la primary key
-                $where.="and Patente='".$param['patente']."'";
+            if(isset($param['Patente'])){ // evalua si existe el auto con la primary key
+                $where.="and Patente='".$param['Patente']."'";
                 if(isset($param['Marca'])){// identifica si esta la clave (atributo de la tabla)
                     $where.="and Marca ='".$param['Marca']."'";
                 }// fin if 

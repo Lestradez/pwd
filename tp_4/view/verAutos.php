@@ -5,6 +5,7 @@ include_once ("./layout/head.php");
 include_once ("./layout/navbar.php");
 ?>
 <section class="main-container p-5">
+  <h3>Autos Registrados</h3>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 text-center ">
     <?php
     $objAuto=new AmbAuto();

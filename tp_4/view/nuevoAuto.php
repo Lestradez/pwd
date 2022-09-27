@@ -8,7 +8,7 @@ include_once ("./layout/navbar.php");
 
 
 <div class="">
-            <h2>Datos necesarios </h2>
+            <h3>Datos necesarios </h3>
 
             <form name="nuevoAuto" action="./action/accionNuevoAuto.php" method="POST">
                 <label for="Patente">Patente:</label><br>
