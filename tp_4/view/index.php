@@ -4,7 +4,7 @@ $title="TP 4 - PWD";
 include_once ("../view/layout/head.php");
 include_once ("../view/layout/navbar.php");
 ?>
-<section class="main-container">
+<section class="main-container home">
     <div class="container">
         <div class="row">
             <div class="col-12">

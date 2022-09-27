@@ -227,6 +227,36 @@ class Persona{
 
     }// fin function 
 
+    
+    /**
+     * METODO PERSONA CON ID
+     * Devuelve el obj de la tabla persona con el id dado
+     * @param string parametro 
+     * @return object
+     */
+    public  function personaConId($parametro){
+        $objPersona=null;
+        $objBase=new BaseDatos();
+        $sql="SELECT * FROM persona WHERE NroDni=".$parametro;
+        $res=$objBase->Ejecutar($sql);
+        //echo($sql);
+        if($res>-1){
+            if($res>0){
+                while($row=$objBase->Registro()){
+                    $newObjPersona=new Persona(); 
+                    $newObjPersona->setear($row['Nombre'],$row['Apellido'],$row['fechaNac'],$row['Telefono'],$row['Domicilio'],$row['NroDni']);
+                    $objPersona=$newObjPersona;  
+
+                }// fin while
+            }// fin if 
+
+        }// fin if 
+        return $objPersona; 
+
+    }// fin function 
+
+
+
    
 
 
