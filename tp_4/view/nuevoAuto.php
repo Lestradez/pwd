@@ -4,41 +4,64 @@ include_once ("../config.php");
 include_once ("./layout/head.php");
 include_once ("./layout/navbar.php");
 ?>
-
-
-
-<div class="">
-            <h3>Datos necesarios </h3>
-
-            <form name="nuevoAuto" action="./action/accionNuevoAuto.php" method="POST">
-                <label for="Patente">Patente:</label><br>
-                <input type="text" name="Patente" id="Patente" required><br>
-                <label for="Marca">Marca:</label><br>
-                <input type="text" name="Marca" id="Marca" required><br>
-                <label for="Modelo">Modelo:</label><br>
-                <input type="number" name="Modelo" id="Modelo" required><br>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" name="Nombre" id="Nombre" required><br>
-                <label for="apellido">Apellido:</label><br>
-                <input type="text" name="Apellido" id="Apellido" required><br>
-                <label for="dni">DNI:</label><br>
-                <input type="number" name="NroDni" id="NroDni" required><br>
-                <label for="telefono">Telefono:</label><br>
-                <input type="tel" name="Telefono" id="Telefono" required><br>
-                <label for="fechaNac">Fecha de Nacimiento:</label><br>
-                <input type="date" name="fechaNac" id="fechaNac" required><br>
-                <label for="domicilio">Domicilio:</label><br>
-                <input type="text" name="Domicilio" id="Domicilio" required><br><br>
-                <input type="submit" name="cargar" value="Cargar">
-
-
-            </form>
-
-
+<section class="main-container p-5">
+    <div class="row">
+        <div class="container p-3 col-auto">
+            <div class="border bg-light border-3 rounded p-2 mt-3 mb-4 shadow">
+                <h3 class=" text-center mb-2 ">Cargar Nuevo Auto</h3>
+                <div class="border bg-light border-3 rounded p-2 mt-3">
+                    <form class="mb-3" method="get" action="./action/accionNuevoAuto.php" id="form1">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="patente" class="form-label">Patente:</label>
+                                <input
+                                type="text" 
+                                maxlength="10" 
+                                placeholder="Patente" 
+                                class="form-control mb-3"
+                                id="patente"
+                                name="patente"
+                                required
+                                />
+                                <label for="Marca" class="form-label">Marca:</label>
+                                <input 
+                                type="text" 
+                                name="Marca" 
+                                id="Marca" 
+                                placeholder="Marca" 
+                                class="form-control mb-3" 
+                                required>
+                            </div>
+                            <div class="col-6">
+                                <label for="Modelo" class="form-label">Modelo:</label>
+                                <input 
+                                type="number" 
+                                minlength="4" 
+                                maxlength="4" 
+                                placeholder="Modelo" 
+                                class="form-control mb-3" 
+                                name="Modelo" 
+                                id="Modelo" 
+                                required>
+                                <label for="NroDni" class="form-label">Dni Dueño:</label> 
+                                <input 
+                                type="number" 
+                                minlength="8" 
+                                maxlength="8" 
+                                placeholder="Dni Dueño" 
+                                class="form-control mb-3" 
+                                name="NroDni" 
+                                id="NroDni" 
+                                required>
+                            </div>    
+                        </div>      
+                        <input class="btn btn-primary" type="submit" value="Cargar" />
+                    </form>
+                </div>
+            </div>
         </div>
-
-
-
+    </div>
+</section>
 
 <?php
 include_once ("./layout/footer.php");
