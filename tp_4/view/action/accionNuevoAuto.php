@@ -16,11 +16,13 @@ $persona=$objPersona->personaConDni($datos['DniDuenio']);// devuelve un obj / nu
 ?>
 
 
-    <div class="container">
+<div class="container">
         <div class="">
             <?php
             if($persona==null){
                 echo("La persona no se encuentra en la BD");
+                echo("<p>Ingrese al siguiente link para cragar los datos de la persona</p>");
+                echo("<a href='../nuevaPersona.php'>Cargar Persona</a>"); 
             }// fin if 
             else{
                 $resultado=$objAuto->alta($datos);
@@ -34,6 +36,7 @@ $persona=$objPersona->personaConDni($datos['DniDuenio']);// devuelve un obj / nu
                 }// fin else
             }// fin if
             ?>
+
 
         </div>
 
