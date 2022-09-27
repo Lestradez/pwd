@@ -43,15 +43,15 @@ include_once ("./layout/navbar.php");
                                 name="Modelo" 
                                 id="Modelo" 
                                 required>
-                                <label for="NroDni" class="form-label">Dni Dueño:</label> 
+                                <label for="DniDuenio" class="form-label">Dni Dueño:</label> 
                                 <input 
                                 type="number" 
                                 minlength="8" 
                                 maxlength="8" 
                                 placeholder="Dni Dueño" 
                                 class="form-control mb-3" 
-                                name="NroDni" 
-                                id="NroDni" 
+                                name="DniDuenio" 
+                                id="DniDuenio" 
                                 required>
                             </div>    
                         </div>      

@@ -14,8 +14,7 @@ class AmbAuto{
         if(array_key_exists('Patente',$datos) && array_key_exists('Marca',$datos) && array_key_exists('Modelo',$datos) && array_key_exists('DniDuenio',$datos) ){
             $obj=new Auto();
             $objPersona=new Persona();
-            $objPersona->setDni($datos['DniDuenio']); // como se los otros datos de la persona ???
-            // $patente,$marca,$modelo,$duenio
+            $objPersona=$objPersona->personaConId($datos['DniDuenio']);// obtiene el obj persona relacionado con el auto 
             $obj->setear($datos['Patente'],$datos['Marca'],$datos['Modelo'],$objPersona);
         }// fin if 
         return $obj; 
@@ -61,7 +60,6 @@ class AmbAuto{
      */
     public function alta($datos){
         $resp=false;
-        //$datos['Patente']=null;
         $objAuto=$this->cargarObjeto($datos);
         if($objAuto!=null && $objAuto->insertar()){
             $resp=true;

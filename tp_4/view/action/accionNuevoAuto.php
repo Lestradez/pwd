@@ -8,27 +8,10 @@ include_once ("../layout/navbar.php");
 
 
 <?php
-
-$datosGenerales=data_submitted();
+$datos=data_submitted();
 $objAuto=new AmbAuto();
 $objPersona=new AmbPersona();
-
-$datosAuto['Patente']=$datosGenerales['Patente'];
-$datosAuto['Modelo']=$datosGenerales['Modelo'];
-$datosAuto['Marca']=$datosGenerales['Marca'];
-$datosAuto['DniDuenio']=$datosGenerales['NroDni']; 
-
-$datosPersona['NroDni']=$datosGenerales['NroDni'];
-$datosPersona['Nombre']=$datosGenerales['Nombre'];
-$datosPersona['Apellido']=$datosGenerales['Apellido'];
-$datosPersona['Telefono']=$datosGenerales['Telefono'];
-$datosPersona['Domicilio']=$datosGenerales['Domicilio'];
-
-$resultadoAltaPersona=$objPersona->alta($datosPersona);
-$resultadoAltaAuto=$objAuto->alta($datosAuto);
-
-
-// persona
+$persona=$objPersona->personaConDni($datos['DniDuenio']);// devuelve un obj / null
 
 ?>
 
@@ -36,16 +19,21 @@ $resultadoAltaAuto=$objAuto->alta($datosAuto);
     <div class="container">
         <div class="">
             <?php
-            if($resultadoAltaAuto && $resultadoAltaPersona){
-                echo("<p> El alta se realizo con exitos !!!</p>");
-
-            } // fin if
+            if($persona==null){
+                echo("La persona no se encuentra en la BD");
+            }// fin if 
             else{
-                echo("<p> Hubo problema con la carga </p>");
+                $resultado=$objAuto->alta($datos);
+                if($resultado){
+                    echo("<p>La carga del auto se realizó con exito</p>");
 
-            }// fin else 
+                }// fin if
+                else{
+                    echo("<p> Hubo problema con la carga del auto a la Base de Datos</p>");
+
+                }// fin else
+            }// fin if
             ?>
-
 
         </div>
 
