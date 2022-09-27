@@ -261,13 +261,7 @@ class Auto {
 
         }// fin if 
         return $objAuto; 
-
     }// fin function 
-
-
-
 }// fin clase auto 
-
-
 
 ?>

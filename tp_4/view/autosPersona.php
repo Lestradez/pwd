@@ -1,7 +1,7 @@
 
 
 <?php 
-$title="Lista de Personas";
+$title="Autos de Personas";
 include_once ("../config.php"); 
 include_once ("./layout/head.php");
 include_once ("./layout/navbar.php");

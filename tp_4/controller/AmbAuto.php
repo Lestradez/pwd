@@ -157,7 +157,7 @@ class AmbAuto{
         $arrayAutos=$this->buscar(null);
         $k=0; // contador
         foreach($arrayAutos as $unAuto){
-            if($dni==$unAuto->getDni()){
+            if($dni==$unAuto->getDuenio()){
                 $autos[$k]=$unAuto;
                 $k++;
 
