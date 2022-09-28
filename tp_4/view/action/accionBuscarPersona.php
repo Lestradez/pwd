@@ -55,3 +55,6 @@ $dni=$dato['dni'];
     </form>
     
   </section>
+  <?php
+include_once ("./layout/footer.php");
+?>

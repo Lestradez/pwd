@@ -1,8 +1,8 @@
 <?php 
 $title="Actualizar Datos de Persona";
-include_once ("../../config.php"); 
-include_once ("../layout/head.php");
-include_once ("../layout/navbar.php");
+include_once ("../config.php"); 
+include_once ("./layout/head.php");
+include_once ("./layout/navbar.php");
 
 $objPersona=new AmbPersona();
 
@@ -29,3 +29,6 @@ $resultado=$objPersona->modificacion($datos);
 
 
         </section>
+        <?php
+include_once ("./layout/footer.php");
+?>
