@@ -18,8 +18,8 @@ include_once ("./layout/navbar.php");
           maxlength="10" 
           placeholder="Patente" 
           class="form-control mb-3"
-          id="patente"
-          name="patente"
+          id="Patente"
+          name="Patente"
           required
         />
         <label for="NroDni">Ingrese el DNI de la persona:</label><br>

@@ -7,12 +7,17 @@ include_once ("../layout/navbar.php");
 $datos=data_submitted();
 
 $objAuto=new AmbAuto();
-$objAuto=$objAuto->autoConPatente($datos['patente']);// obtiene el array de la tabla con la patente dada por el formulario
-$datosAuto['Patente']=$objAuto->getPatente();
-$datosAuto['Marca']=$objAuto->getMarca();
-$datosAuto['Modelo']=$objAuto->getModelo();
-$datosAuto['DniDuenio']=$datos['NroDni']; //$objAuto->getDuenio()->getDni();
-$resultado=$objAuto->modificacion($datosAuto);
+$objPersona=new AmbPersona();
+$objAutoRec=$objAuto->autoConPatente($datos['patente']);// obtiene como obj el auto que esta en la BD con la patente dada
+$personaDni=$objPersona->personaConDni($datos['NroDni']);
+$datosAuto['Patente']=$objAutoRec->getPatente();
+$datosAuto['Marca']=$objAutoRec->getMarca();
+$datosAuto['Modelo']=$objAutoRec->getModelo();
+$datosAuto['DniDuenio']=$personaDni->getDni();
+$estaAuto=$objAuto<>null;
+$estaPersona=$personaDni<>null;
+
+
 
 
 ?>
@@ -20,12 +25,18 @@ $resultado=$objAuto->modificacion($datosAuto);
 <section class="main-container p-5">
         <div>
             <?php
-            if($resultado){
-                echo("<p>Se modifico exitosamente el dni del dueño del auto</p>");
+            if($estaAuto && $estaPersona){
+                $resultado=$objAuto->modificacion($datosAuto);
+                if($resultado){
+                    echo("<p>Se modifico exitosamente el dni del dueño del auto</p>");
+                }// fin if
+                else{
+                    echo("<p>No se pudo modificar el dni del dueño del auto</p>");
+                }// fin else
 
             } // fin if 
             else{
-                echo("<p>No se pudo modificar el dni del dueño del auto</p>");
+                echo("<p>La persona con el dni ingresado no se encuentra en la base de datos</p>");
 
             }// fin else
             ?>
