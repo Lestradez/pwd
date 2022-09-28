@@ -1,5 +1,10 @@
-<?php
-include_once '../../configuracio.php';
+<?php 
+$title="Buscar Auto";
+include_once ("../../config.php"); 
+include_once ("../layout/head.php");
+include_once ("../layout/navbar.php");
+
+
 $dato=data_submitted(); 
 $objPersona=new AmbPersona();
 $personas=$objPersona->personaConDni($dato['dni']);// devuelve el obj persona (con su datos), buscando  el dni dado por parametro
@@ -12,16 +17,8 @@ $fechaNacimiento=$personas->getfechaNac();
 $dni=$dato['dni']; 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos a modificar</title>
-        <!--  Link de Boostrap-->
-</head>
-<body>
+<section class="main-container p-5">
+
     <h3>Datos de la Persona seleccionada</h3>
 
     <form name="datosModificar" method="post" action="../actualizarDatosPersona.php">
@@ -57,7 +54,4 @@ $dni=$dato['dni'];
 
     </form>
     
-   
-
-</body>
-</html>
+  </section>

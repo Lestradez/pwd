@@ -1,5 +1,9 @@
-<?php
-include_once '../configuracio.php';
+<?php 
+$title="Actualizar Datos de Persona";
+include_once ("../../config.php"); 
+include_once ("../layout/head.php");
+include_once ("../layout/navbar.php");
+
 $objPersona=new AmbPersona();
 
 // NOTA: como el metodo modificar me pide todos los datos para realizar la modificacion por eso pase todos los datos. Por 
@@ -10,20 +14,9 @@ $resultado=$objPersona->modificacion($datos);
 
 
 ?>
+<section class="main-container p-5">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--  Link de Boostrap-->
 
-</head>
-<body>
-    <div class="container">
-        <div class="">
             <?php 
             if($resultado){
                 echo("<p>La modificacion se realizó con éxito</p>");
@@ -35,8 +28,4 @@ $resultado=$objPersona->modificacion($datos);
             ?>
 
 
-        </div>
-    </div>
-    
-</body>
-</html>
+        </section>
