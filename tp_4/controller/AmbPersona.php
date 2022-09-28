@@ -26,9 +26,9 @@ class AmbPersona{
      */
     private function cargarObjetoConClave($datos){
         $obj=null;
-        if(isset($datos['DniDuenio'])){
+        if(isset($datos['NroDni'])){
             $obj=new Persona();
-            $obj->setear($datos['Nombre'],$datos['Apellido'],$datos['fechaNac'],$datos['Telefono'],$datos['Domicilio'],$datos['DniDuenio']);
+            $obj->setear($datos['Nombre'],$datos['Apellido'],$datos['fechaNac'],$datos['Telefono'],$datos['Domicilio'],$datos['NroDni']);
 
 
         }// fin
@@ -43,7 +43,7 @@ class AmbPersona{
      */
     private function seteadosCamposClaves($datos){
         $resp=false;
-        if(isset($datos['Nombre']) && isset($datos['Apellido']) && isset($datos['fechaNac']) && isset($datos['Telefono']) && isset($datos['Domicilio']) && isset($datos['DniDuenio'])){
+        if(isset($datos['Nombre']) && isset($datos['Apellido']) && isset($datos['fechaNac']) && isset($datos['Telefono']) && isset($datos['Domicilio']) && isset($datos['NroDni'])){
             $resp=true; 
         }// fin if 
 

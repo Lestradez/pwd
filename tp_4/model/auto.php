@@ -6,7 +6,7 @@ class Auto {
     private string $patente;
     private string $marca;
     private int $modelo;
-    private int $objDuenio; // clave foranea  obj Persona
+    private $objDuenio; // clave foranea  obj Persona
     private string $mensaje; 
 
     public function __construct(){
@@ -114,10 +114,8 @@ class Auto {
     public function insertar(){
         $salida=false; 
         $objBase=new BaseDatos();
-        $objPersona=new Persona();
-        $row=$objBase->Registro();
-        $objPersona=$objPersona->personaConId($row['DniDuenio']);
-        $dni=$objPersona->getDni();
+        $objDuenio=$this->getDuenio();
+        $dni=$objDuenio->getDni();
         $sql="INSERT INTO auto(Patente,Marca,Modelo,DniDuenio) VALUES ('".$this->getPatente()."','".$this->getMarca()."','".$this->getModelo()."','".$dni."')";
         if($objBase->Iniciar()){
             if($objBase->Ejecutar($sql)){
@@ -147,10 +145,7 @@ class Auto {
     public function modificar(){
         $salida=false;
         $objBase=new BaseDatos();
-        $objPersona=new Persona();
-        $row=$objBase->Registro();
-        $objPersona=$objPersona->personaConId($row['DniDuenio']);
-        $dni=$objPersona->getDni();
+        $dni=$this->getDuenio()->getDni();
 
         $sql="UPDATE auto SET Marca='".$this->getMarca()."' Modelo='".$this->getModelo()."' DniDuenio=".$dni."  WHERE Patente='".$this->getPatente()."'";
         if($objBase->Iniciar()){
