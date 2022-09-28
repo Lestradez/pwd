@@ -6,7 +6,7 @@ class Auto {
     private string $patente;
     private string $marca;
     private int $modelo;
-    private object $objDuenio; // clave foranea  obj Persona
+    private $objDuenio; // clave foranea  obj Persona
     private string $mensaje; 
 
     public function __construct(){
