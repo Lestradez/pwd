@@ -20,7 +20,7 @@ include_once ("./layout/footer.php");
 <h1>Busqueda de Persona</h1>
     <div class="container">
         <div class="">
-            <form action="./accion/accionBuscarPersona.php"  method="post" name="busquedaPersona";>
+            <form action="./action/accionBuscarPersona.php"  method="post" name="busquedaPersona";>
                 <label for="dni"> Ingrese su nro de documento:</label><br>
                 <input type="number" name="dni" id="dni" required><br><br>
                 <input type="submit" name="buscar" id="buscar" value="buscar">
