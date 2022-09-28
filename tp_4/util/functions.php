@@ -22,6 +22,28 @@ function verEstructura($e){
     echo "</pre>"; 
 }
 
+// NUEVA FORMA DE USAR EL METODO AUTOLOAD
+spl_autoload_register(function ($clase) {
+    // echo "Cargamos la clase  ".$clase."<br>" ;
+     $directorys = array(
+         $GLOBALS['ROOT'].'Model/',
+         $GLOBALS['ROOT'].'Controller/',
+         $GLOBALS['ROOT'].'Model/conector/',
+         $GLOBALS['ROOT'].'Model/otrasclases/',
+     );
+     // print_r($directorys) ;
+     foreach($directorys as $directory){
+         if(file_exists($directory.$clase . '.php')){
+             // echo "se incluyo".$directory.$class_name . '.php';
+             require_once($directory.$clase . '.php');
+             return;
+         }
+     }
+ 
+ 
+ });
+
+/** 
 function __autoload($class_name){
     $directorys = array(
         $_SESSION['ROOT'].'model/',
@@ -35,5 +57,6 @@ function __autoload($class_name){
         }
     }
 }
+*/
 
 ?>

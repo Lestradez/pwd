@@ -147,7 +147,7 @@ class Auto {
         $objBase=new BaseDatos();
         $dni=$this->getDuenio()->getDni();
 
-        $sql="UPDATE auto SET Marca='".$this->getMarca()."' Modelo='".$this->getModelo()."' DniDuenio=".$dni."  WHERE Patente='".$this->getPatente()."'";
+        $sql="UPDATE auto SET Marca='".$this->getMarca()."' Modelo='".$this->getModelo()."' DniDuenio='".$dni."'  WHERE Patente='".$this->getPatente()."'";
         if($objBase->Iniciar()){
             if($objBase->Ejecutar($sql)){
                 $salida=true; 
