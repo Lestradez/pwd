@@ -56,5 +56,5 @@ $dni=$dato['dni'];
     
   </section>
   <?php
-include_once ("./layout/footer.php");
+include_once ("../layout/footer.php");
 ?>
