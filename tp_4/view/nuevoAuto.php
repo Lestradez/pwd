@@ -13,13 +13,13 @@ include_once ("./layout/navbar.php");
                     <form class="mb-3" method="get" action="./action/accionNuevoAuto.php" id="form1">
                         <div class="row">
                             <div class="col-6">
-                                <label for="patente" class="form-label">Patente:</label>
+                                <label for="Patente" class="form-label">Patente:</label>
                                 <input
                                 type="text" 
                                 maxlength="10" 
                                 placeholder="Patente" 
                                 class="form-control mb-3"
-                                id="patente"
+                                id="Patente"
                                 name="patente"
                                 required
                                 />

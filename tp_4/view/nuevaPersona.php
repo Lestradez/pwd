@@ -35,16 +35,15 @@ include_once ("./layout/navbar.php");
                                   name="apellido"
                                   required
                                 />                                
-                                <label for="NroDni" class="form-label">DNI:</label> 
+                                <label for="nroDni" class="form-label">DNI:</label> 
                                 <input 
                                   type="number" 
                                   minlength="8" 
                                   maxlength="8" 
                                   placeholder="Dni Dueño" 
                                   class="form-control mb-3" 
-                                  name="NroDni" 
-                                  id="NroDni" 
-                                  value=12345678
+                                  name="nroDni" 
+                                  id="nroDni" 
                                   require>
                                 </div>
                                 <div class="col-6">
@@ -55,8 +54,6 @@ include_once ("./layout/navbar.php");
                                     id="fechaNac"
                                     placeholder="Modelo" 
                                     class="form-control mb-3" 
-                                    name="Nacimiento" 
-                                    id="Nacimiento" 
                                     required>
                                   <label for="telefono" class="form-label">Teléfono:</label> 
                                   <input 
@@ -68,15 +65,15 @@ include_once ("./layout/navbar.php");
                                     name="telefono" 
                                     id="telefono" 
                                     require>
-                                  <label for="direccion" class="form-label">Dirección:</label>
+                                  <label for="domicilio" class="form-label">Dirección:</label>
                                   <input 
                                     type="text" 
                                     minlength="4" 
                                     maxlength="15"
                                     placeholder="Dirección" 
                                     class="form-control mb-3" 
-                                    name="direccion" 
-                                    id="direccion" 
+                                    name="domicilio" 
+                                    id="domicilio" 
                                 required>
                                 
                               </div>    
