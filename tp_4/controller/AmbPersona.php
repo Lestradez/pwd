@@ -10,15 +10,14 @@ class AmbPersona{
      */
     private function cargarObjeto($datos){
         $obj=null;
-        if(array_key_exists('Nombre',$datos) && array_key_exists('Apellido',$datos) && array_key_exists('fechaNac',$datos) && array_key_exists('Telefono',$datos) && array_key_exists('Domicilio',$datos) && array_key_exists('NroDni',$datos)){
-            $obj=new Persona();
-            $obj->setear($datos['Nombre'],$datos['Apellido'],$datos['fechaNac'],$datos['Telefono'],$datos['Domicilio'],$datos['NroDni']);
-
+        if(array_key_exists('nombre',$datos) && array_key_exists('apellido',$datos) && array_key_exists('fechaNac',$datos) && array_key_exists('telefono',$datos) && array_key_exists('domicilio',$datos) && array_key_exists('nroDni',$datos)){
+            $obj=new Persona($datos);
+            $obj->setear($datos['nombre'],$datos['apellido'],$datos['fechaNac'],$datos['telefono'],$datos['domicilio'],$datos['nroDni']);
 
         }// fin if
         return $obj; 
     }// fin function 
-
+    
     /**
      * ESPERA UN ARRAY ASOCIATIVO DONDE LAS CLAVES SON LAS CAMPOS DE LA TABLA
      * @param array $datos
@@ -28,14 +27,14 @@ class AmbPersona{
         $obj=null;
         if(isset($datos['NroDni'])){
             $obj=new Persona();
-            $obj->setear($datos['Nombre'],$datos['Apellido'],$datos['fechaNac'],$datos['Telefono'],$datos['Domicilio'],$datos['NroDni']);
-
-
+            $obj->setear($datos['nombre'],$datos['apellido'],$datos['fechaNac'],$datos['telefono'],$datos['domicilio'],$datos['nroDni']);
+            
+            
         }// fin
         
         return $obj; 
     }// fin function 
-
+    
     /**
      * Corrobora que dentro del array asociativo esten seteados los campos
      * @param array $datos
@@ -43,13 +42,13 @@ class AmbPersona{
      */
     private function seteadosCamposClaves($datos){
         $resp=false;
-        if(isset($datos['Nombre']) && isset($datos['Apellido']) && isset($datos['fechaNac']) && isset($datos['Telefono']) && isset($datos['Domicilio']) && isset($datos['NroDni'])){
+        if(isset($datos['nombre']) && isset($datos['apellido']) && isset($datos['fechaNac']) && isset($datos['telefono']) && isset($datos['domicilio']) && isset($datos['nroDni'])){
             $resp=true; 
         }// fin if 
-
+        
         return $resp; 
     }// fin function 
-
+    
     /**
      * ALTA
      * @param array $datos
@@ -57,17 +56,15 @@ class AmbPersona{
      */
     public function alta($datos){
         $resp=false;
-        //$datos['DniDuenio']=null;
-       // var_dump($datos); 
         $objPersona=$this->cargarObjeto($datos);
         if($objPersona!=null && $objPersona->insertar()){
             $resp=true;
-
+            
         }// fin if 
-
+        
         return $resp;
     }// fin function 
-
+    
     /**
      * METODO BAJA PERSONA 
      * @param array $datos
@@ -79,15 +76,15 @@ class AmbPersona{
             $objPersona=$this->cargarObjetoConClave($datos);
             if($objPersona!=null && $objPersona->eliminar()){
                 $resp=true;
-
+                
             }// fin if 
-
+            
         }// fin if
-
+        
         return $resp;
-
+        
     }// fin function
-
+    
     /**
      * METODO MODIFICAR PERSONA 
      * @param array $datos
@@ -99,16 +96,16 @@ class AmbPersona{
             $objPersona=$this->cargarObjeto($datos);
             if($objPersona!=null && $objPersona->modificar()){
                 $resp=true; 
-
+                
             }// fin if 
-
+            
         }// fin if 
-
+        
         return $resp; 
 
     }// fin function 
 
-     /**
+    /**
      * METODO BUSCAR
      * @param array $param
      * @return array / 
@@ -116,37 +113,36 @@ class AmbPersona{
     public function buscar($param){
         $where=""; 
         $arreglo=array();
-       // var_dump($param);
         if($param<>null){
             if(isset($param['NroDni'])){
                 $where.="and NroDni=".$param['NroDni'];
             }// fin if
             if(isset($param['Apellido'])){
                 $where.="and Apellido='".$param['Apellido']."'";
-
+                
             }// fin if 
             if(isset($param['Nombre'])){
                 $where.="and Nombre='".$param['Nombre']."'";
-
+                
             }// fin if 
             if(isset($param['fechaNac'])){
                 $where.="and fechaNac='".$param['fechaNac']."'";
-
+                
             }// fin if 
             if(isset($param['Telefono'])){
                 $where.="and Telefono='".$param['Telefono']."'";
-
+                
             }// fin if 
             if(isset($param['Domicilio'])){
                 $where.="and Domicilio='".$param['Domicilio']."'";
             }// fin if
-
+            
         }// fin if
          
         $arreglo=Persona::listar($where);
 
         return $arreglo; 
-
+        
     }// fin function 
 
     /**
