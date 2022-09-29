@@ -8,7 +8,7 @@ $datos=data_submitted();
 
 $objAuto=new AmbAuto();
 $objPersona=new AmbPersona();
-$objAutoRec=$objAuto->autoConPatente($datos['patente']);// obtiene como obj el auto que esta en la BD con la patente dada
+$objAutoRec=$objAuto->autoConPatente($datos['Patente']);// obtiene como obj el auto que esta en la BD con la patente dada
 $personaDni=$objPersona->personaConDni($datos['NroDni']);
 $datosAuto['Patente']=$objAutoRec->getPatente();
 $datosAuto['Marca']=$objAutoRec->getMarca();
