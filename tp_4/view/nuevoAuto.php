@@ -36,8 +36,8 @@ include_once ("./layout/navbar.php");
                                 <label for="Modelo" class="form-label">Modelo:</label>
                                 <input 
                                 type="number" 
-                                minlength="4" 
-                                maxlength="4" 
+                                min=1900 
+                                max=2022
                                 placeholder="Modelo" 
                                 class="form-control mb-3" 
                                 name="Modelo" 
@@ -46,8 +46,8 @@ include_once ("./layout/navbar.php");
                                 <label for="DniDuenio" class="form-label">Dni Dueño:</label> 
                                 <input 
                                 type="number" 
-                                minlength="8" 
-                                maxlength="8" 
+                                max=99999999
+                                min=1000000 
                                 placeholder="Dni Dueño" 
                                 class="form-control mb-3" 
                                 name="DniDuenio" 

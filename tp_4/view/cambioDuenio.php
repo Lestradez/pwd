@@ -25,8 +25,8 @@ include_once ("./layout/navbar.php");
         <label for="NroDni">Ingrese el DNI de la persona:</label><br>
         <input
           type="number" 
-          maxlength="8"
-          minlength="8" 
+          min=1000000 
+          max=99999999
           placeholder="DNI" 
           class="form-control mb-3"
           id="NroDni"

@@ -47,7 +47,14 @@ $dni=$dato['dni'];
         <input type="text" class="form-control" name="fechaNac" value="<?php echo($fechaNacimiento)?>" aria-label="Last name">
         </div>
         <div class="col">  
-        <input type="number" class="form-control" name="NroDni" value="<?php echo($dni)?>" aria-label="Last name" hidden>
+        <input 
+          type="number" 
+          min=1000000 
+          max=99999999
+          class="form-control" 
+          name="NroDni" 
+          value="<?php echo($dni)?>" aria-label="Last name" 
+          hidden>
         </div>
 
         <div class="col-12">
