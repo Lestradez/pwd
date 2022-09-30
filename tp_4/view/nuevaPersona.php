@@ -38,8 +38,8 @@ include_once ("./layout/navbar.php");
                                 <label for="nroDni" class="form-label">DNI:</label> 
                                 <input 
                                   type="number" 
-                                  minlength="8" 
-                                  maxlength="8" 
+                                  min=1000000
+                                  max=99999999
                                   placeholder="Dni Dueño" 
                                   class="form-control mb-3" 
                                   name="nroDni" 

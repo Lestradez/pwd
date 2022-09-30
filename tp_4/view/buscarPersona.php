@@ -11,7 +11,15 @@ include_once ("./layout/navbar.php");
         <div class="border bg-light border-3 rounded p-2 mt-3">
             <form class="mb-3" ction="./action/accionBuscarPersona.php"  method="post" name="busquedaPersona";>
                 <label class="form-label" for="dni"> Ingrese su nro de documento:</label>
-                <input class="form-control mb-3" placeholder="DNI" type="number" minlength="8" maxlength="8" name="dni" id="dni" required>
+                <input 
+                    class="form-control mb-3" 
+                    placeholder="DNI" 
+                    type="number" 
+                    min=1000000    
+                    max=99999999
+                    name="dni" 
+                    id="dni" 
+                    required>
                 <input class="btn btn-primary" type="submit" name="buscar" id="buscar" value="buscar">
             </form>
         </div>        
