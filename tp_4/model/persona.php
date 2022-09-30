@@ -237,9 +237,8 @@ class Persona{
     public  function personaConId($parametro){
         $objPersona=null;
         $objBase=new BaseDatos();
-        $sql="SELECT * FROM persona WHERE NroDni=".$parametro;
+        $sql='SELECT * FROM persona WHERE NroDni="'.$parametro.'"';
         $res=$objBase->Ejecutar($sql);
-        //echo($sql);
         if($res>-1){
             if($res>0){
                 while($row=$objBase->Registro()){

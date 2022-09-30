@@ -12,7 +12,7 @@ include_once ("./layout/navbar.php");
       <h3 class=" text-center mb-2 ">Cambiar dueño de un Auto</h3>
       <div class="border bg-light border-3 rounded p-2 mt-3">
       <form class="mb-3" method="post" action="./action/accionCambioDuenio.php" id="cambiaDuenio">
-        <label for="string" class="form-label">Ingrese la Patente:</label>
+        <label for="text" class="form-label">Ingrese la Patente:</label>
         <input
           type="text" 
           maxlength="10" 
@@ -24,7 +24,7 @@ include_once ("./layout/navbar.php");
         />
         <label for="NroDni">Ingrese el DNI de la persona:</label><br>
         <input
-          type="text" 
+          type="number" 
           maxlength="8"
           minlength="8" 
           placeholder="DNI" 
