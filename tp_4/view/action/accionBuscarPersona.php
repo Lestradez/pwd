@@ -9,16 +9,19 @@ $dato=data_submitted();
 $objPersona=new AmbPersona();
 $personas=$objPersona->personaConDni($dato['dni']);// devuelve el obj persona (con su datos), buscando  el dni dado por parametro
 // Datos obtenidos de la BD
+$estaPersona=$personas<>null;
+if ($estaPersona){
 $nombre=$personas->getNombre();
 $apellido=$personas->getApellido();
 $telefono=$personas->getTelefono();
 $domicilio=$personas->getDomicilio();
 $fechaNacimiento=$personas->getfechaNac();
 $dni=$dato['dni']; 
+}
 ?>
 
 <section class="main-container p-5">
-
+<?php if($estaPersona){ ?>
     <h3>Datos de la Persona seleccionada</h3>
 
     <form name="datosModificar" method="post" action="../actualizarDatosPersona.php">
@@ -53,8 +56,13 @@ $dni=$dato['dni'];
         </div>
 
     </form>
-    
+    <?php }else{ ?>
+        <h3>No se encontro la persona</h3>
+      <div class="alert alert-danger text-center" role="alert"> El DNI ingresado no está registrado. <a href="../buscarPersona.php" class="alert-link">Volver a intentarlo!</a> / <a href="../nuevaPersona.php" class="alert-link">Cargar nueva persona!</a></div>
+
+    <?php } ?>
   </section>
+  
   <?php
 include_once ("../layout/footer.php");
 ?>
